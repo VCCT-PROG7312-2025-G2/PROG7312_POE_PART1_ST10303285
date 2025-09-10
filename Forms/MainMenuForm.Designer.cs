@@ -31,14 +31,14 @@ namespace MunicipalServicesApp
             this.headerPanel.BackColor = ColorTranslator.FromHtml("#6CB2B2"); // pastel teal
 
             // Title
-            this.lblTitle.Text = "CityConnect — Municipal Services";
+            this.lblTitle.Text = "City Services Hub — Municipal Services";
             this.lblTitle.Font = new Font("Segoe UI Semibold", 20F, FontStyle.Bold);
             this.lblTitle.ForeColor = Color.White;
             this.lblTitle.AutoSize = true;
             this.lblTitle.Location = new Point(24, 18);
 
             // Subtitle
-            this.lblSubtitle.Text = "Report issues, view updates and stay connected with your local municipality.";
+            this.lblSubtitle.Text = "Report issues, view updates and stay in touch with your municipality.";
             this.lblSubtitle.Font = new Font("Segoe UI", 10F);
             this.lblSubtitle.ForeColor = Color.WhiteSmoke;
             this.lblSubtitle.AutoSize = true;
@@ -57,7 +57,7 @@ namespace MunicipalServicesApp
             // Add cards
             this.cardsPanel.Controls.Add(CreateCard("Report Issues", "Report potholes, broken lights, sanitation problems and more.", true, BtnReport_Click, Properties.Resources.reportIcon));
             this.cardsPanel.Controls.Add(CreateCard("Local Events & Announcements", "View upcoming local events and official announcements.", false, BtnEvents_Click, Properties.Resources.eventsIcon));
-            this.cardsPanel.Controls.Add(CreateCard("Service Request Status", "Check status of previously submitted requests.", false, BtnStatus_Click, Properties.Resources.statusIcon));
+            this.cardsPanel.Controls.Add(CreateCard("Service Request Status", "Check the status of previously submitted requests/issues.", false, BtnStatus_Click, Properties.Resources.statusIcon));
 
             this.Controls.Add(this.cardsPanel);
             this.Controls.Add(this.headerPanel);
