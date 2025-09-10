@@ -5,14 +5,14 @@ using System.Drawing.Drawing2D;
 
 namespace MunicipalServicesApp
 {
-    partial class MainMenuForm
+    partial class MainMenuForm // Form
     {
-        private Panel headerPanel;
-        private Label lblTitle;
-        private Label lblSubtitle;
-        private FlowLayoutPanel cardsPanel;
+        private Panel headerPanel; //Header panel
+        private Label lblTitle; // Title label
+        private Label lblSubtitle; // Subtitle label
+        private FlowLayoutPanel cardsPanel; // Panel to hold cards
 
-        private void InitializeComponent()
+        private void InitializeComponent() // Method to initialize components
         {
             this.headerPanel = new Panel();
             this.lblTitle = new Label();
@@ -63,7 +63,7 @@ namespace MunicipalServicesApp
             this.Controls.Add(this.headerPanel);
         }
 
-        private Panel CreateCard(string title, string desc, bool enabled, EventHandler onClick, Image icon)
+        private Panel CreateCard(string title, string desc, bool enabled, EventHandler onClick, Image icon) // Method to create a card
         {
             var panel = new Panel()
             {
@@ -123,10 +123,10 @@ namespace MunicipalServicesApp
                 Font = new Font("Segoe UI", 10F, FontStyle.Regular),
             };
 
-            btn.FlatAppearance.BorderSize = 0;
+            btn.FlatAppearance.BorderSize = 0; //
             btn.Region = new Region(RoundedRect(new Rectangle(0, 0, btn.Width, btn.Height), 8));
 
-            if (enabled) btn.Click += onClick;
+            if (enabled) btn.Click += onClick;// attach event
             else btn.Click += (s, e) => MessageBox.Show("This feature is coming in a later release.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             panel.Controls.Add(iconBox);
@@ -137,7 +137,7 @@ namespace MunicipalServicesApp
             return panel;
         }
 
-        private GraphicsPath RoundedRect(Rectangle bounds, int radius)
+        private GraphicsPath RoundedRect(Rectangle bounds, int radius) // Method to create rounded rectangle path
         {
             var path = new GraphicsPath();
             int d = radius * 2;

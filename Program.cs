@@ -8,14 +8,14 @@ namespace MunicipalServicesApp
     internal static class Program
     {
        
-        public static SinglyLinkedList<Issue> Issues = new SinglyLinkedList<Issue>();
-        
+        public static SinglyLinkedList<Issue> Issues = new SinglyLinkedList<Issue>(); // Custom linked list to store issues
+
         [STAThread]
         static void Main()
         {
            
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainMenuForm());
+            Application.Run(new MainMenuForm()); // Start with MainMenuForm
         }
     }
 }

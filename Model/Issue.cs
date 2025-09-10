@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MunicipalServicesApp.Model
 {
-    public class Issue
+    public class Issue // Issue model class
     {
         public string Id { get; set; }
         public DateTime DateReported { get; set; }
@@ -16,7 +16,7 @@ namespace MunicipalServicesApp.Model
         public string AttachmentPath { get; set; }
         public string EngagementLevel { get; set; }
 
-        public Issue()
+        public Issue() // Constructor
         {
             Id = Guid.NewGuid().ToString();
             DateReported = DateTime.Now;

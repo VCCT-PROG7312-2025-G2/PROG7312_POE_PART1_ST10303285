@@ -7,20 +7,23 @@ using System.Threading.Tasks;
 
 namespace MunicipalServicesApp.Data
 {
-    public class SinglyLinkedList<T> : IEnumerable<T>
+    public class SinglyLinkedList<T> : IEnumerable<T> // Simple singly linked list implementation
     {
-        private Node head = null;
-        private Node tail = null;
-        private int count = 0;
+        private Node head = null; // First node
+        private Node tail = null; // Last node
+        private int count = 0; // Number of elements
 
-        private class Node
+        private class Node // Node class
         {
-            public T Value;
-            public Node Next;
-            public Node(T value) { Value = value; Next = null; }
+            public T Value; // Value of the node
+            public Node Next; // Pointer to the next node
+            public Node(T value) // Constructor
+            { 
+                Value = value; Next = null;
+            }
         }
 
-        public void AddLast(T value)
+        public void AddLast(T value) // Add value to the end of the list
         {
             var n = new Node(value);
             if (head == null) head = n;
@@ -29,9 +32,9 @@ namespace MunicipalServicesApp.Data
             count++;
         }
 
-        public int Count => count;
+        public int Count => count; // Get number of elements
 
-        public IEnumerator<T> GetEnumerator()
+        public IEnumerator<T> GetEnumerator() // Enumerator for iteration
         {
             var current = head;
             while (current != null)
@@ -41,9 +44,8 @@ namespace MunicipalServicesApp.Data
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator(); // Non-generic enumerator
 
-        // Optional: find by predicate
         public T Find(Predicate<T> predicate)
         {
             var current = head;

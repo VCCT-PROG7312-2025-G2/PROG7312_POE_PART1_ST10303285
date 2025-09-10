@@ -11,19 +11,19 @@ using MunicipalServicesApp.Model;
 
 namespace MunicipalServicesApp
 {
-    public partial class ReportIssuesForm : Form
+    public partial class ReportIssuesForm : Form // Form
     {
-        private string selectedAttachmentPath = null;
+        private string selectedAttachmentPath = null; // Path of the selected attachment
 
-        public ReportIssuesForm()
+        public ReportIssuesForm() // Constructor
         {
             InitializeComponent();
             UpdateEngagement();
         }
 
-        private void AnyInputChanged(object sender, EventArgs e) => UpdateEngagement();
+        private void AnyInputChanged(object sender, EventArgs e) => UpdateEngagement(); // Event handler for input changes
 
-        private void UpdateEngagement()
+        private void UpdateEngagement() // Method to update engagement level
         {
             int score = 0;
             if (!string.IsNullOrWhiteSpace(txtLocation.Text)) score++;
@@ -44,7 +44,7 @@ namespace MunicipalServicesApp
             };
         }
 
-        private void BtnAttach_Click(object sender, EventArgs e)
+        private void BtnAttach_Click(object sender, EventArgs e) // Event handler for attach button
         {
             using var dlg = new OpenFileDialog();
             dlg.Filter = "Images & Documents|*.jpg;*.jpeg;*.png;*.bmp;*.pdf;*.doc;*.docx;*.txt|All files|*.*";
@@ -57,7 +57,7 @@ namespace MunicipalServicesApp
             }
         }
 
-        private void BtnSubmit_Click(object sender, EventArgs e)
+        private void BtnSubmit_Click(object sender, EventArgs e) // Event handler for submit button
         {
             if (string.IsNullOrWhiteSpace(txtLocation.Text))
             {
@@ -99,7 +99,7 @@ namespace MunicipalServicesApp
             UpdateEngagement();
         }
 
-        private void BtnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e) // Event handler for back button
         {
             Close();
         }

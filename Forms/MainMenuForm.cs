@@ -15,26 +15,26 @@ namespace MunicipalServicesApp
 {
     public partial class MainMenuForm : Form
     {
-        public MainMenuForm()
+        public MainMenuForm() // Constructor
         {
             InitializeComponent();
         }
 
-        private void BtnReport_Click(object sender, EventArgs e)
+        private void BtnReport_Click(object sender, EventArgs e) // Event handler for report button
         {
-            var f = new ReportIssuesForm();
+            var f = new ReportIssuesForm(); // Create new ReportIssuesForm
             f.FormClosed += (s, args) => Show();
             f.Show();
             Hide();
         }
 
-        private void BtnEvents_Click(object sender, EventArgs e)
+        private void BtnEvents_Click(object sender, EventArgs e) // Event handler for events button
         {
-            MessageBox.Show("This feature is coming in a later release.", "Info",
+            MessageBox.Show("This feature is coming in a later release.", "Info", 
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void BtnStatus_Click(object sender, EventArgs e)
+        private void BtnStatus_Click(object sender, EventArgs e) // Event handler for status button
         {
             MessageBox.Show("This feature is coming in a later release.", "Info",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
