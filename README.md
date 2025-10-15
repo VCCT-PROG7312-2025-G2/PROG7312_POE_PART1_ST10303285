@@ -6,8 +6,8 @@ It forms Part 2 of the POE and implements the **Report Issues** feature as well 
 
 ## Features
 ### General Features:
-- **Main Menu (Form)** – Startup menu that provides access to different sections (Report Issues,Local Events and Announcements, etc).
-- **Report Issues Form** – Users can submit details about problems in their area.
+- **Main Menu (Form)** â€“ Startup menu that provides access to different sections (Report Issues,Local Events and Announcements, etc).
+- **Report Issues Form** â€“ Users can submit details about problems in their area.
 
 ### Local Events Features:
 - **Events Panel** - View all upcoming events with details
@@ -23,14 +23,14 @@ It forms Part 2 of the POE and implements the **Report Issues** feature as well 
 1. Launch the application in Visual Studio (C# .NET Windows Forms).
 2. Set the startup project to MunicipalServicesApp.
 3. Run the application (F5 or Ctrl+F5).
-4. The **Main Menu** will appear – select "Report Issues."
+4. The **Main Menu** will appear â€“ select "Report Issues."
 5. Fill in the following fields:
    - Location
    - Category
    - Description (must be detailed, >25 characters recommended)
    - Attachment (optional, but encouraged)
 6. Watch the **progress bar** update as you provide more details.
-7. Submit the issue – feedback messages confirm success or errors.
+7. Submit the issue â€“ feedback messages confirm success or errors.
 8. Go back to main menu, choose "Local Events and Announcements"
 9. In the Local Events Form:
    - Search, filter, or sort events.
@@ -57,3 +57,5 @@ https://learn.microsoft.com/en-us/visualstudio/designers/walkthrough-windows-for
 https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-9.0
 https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.priorityqueue-2?view=net-9.0
 https://medium.com/mesciusinc/the-definitive-guide-to-winforms-controls-f7f12196563a 
+<img width="512" height="512" alt="CPT" src="https://github.com/user-attachments/assets/19f78303-8af1-4352-b959-ae7c6fced58e" />
+
