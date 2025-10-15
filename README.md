@@ -37,12 +37,23 @@ It forms Part 2 of the POE and implements the **Report Issues** feature as well 
    - Click events to see details
    - Watch your Recommended for You panel update in real time.
    
+## Data Structures Used:
+- **Dictionary**: Used to store and manage event data, allowing for efficient retrieval and updates based on user interactions.
+- **SortedDictionary<DateTime, List<Event>>**: Stores events grouped by date.
+- **PriorityQueue<Event, int>**: Manages event recommendations based on user preferences and interaction history.
+- **List<Event>**: Maintains a list of all events for easy iteration and display.
+- **HashSet<string>**: Tracks unique categories and locations for filtering options.
+- **Custom Event Class**: Represents event details including name, date, category, location, and description.
+- **Custom UserPreferences Class**: Tracks user interactions and preferences to tailor event recommendations.
    
-
 ## Requirements
 - Visual Studio 2019/2022
 - .NET Framework (Windows Forms project type)
 - Windows OS
 
 
----
+## References:
+https://learn.microsoft.com/en-us/visualstudio/designers/walkthrough-windows-forms-designer?view=vs-2022
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-9.0
+https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.priorityqueue-2?view=net-9.0
+https://medium.com/mesciusinc/the-definitive-guide-to-winforms-controls-f7f12196563a 
