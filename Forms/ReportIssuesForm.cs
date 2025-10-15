@@ -18,6 +18,10 @@ namespace MunicipalServicesApp
         public ReportIssuesForm() // Constructor
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.Sizable;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.WindowState = FormWindowState.Maximized;
+            this.FormBorderStyle = FormBorderStyle.Sizable;
             UpdateEngagement();
         }
 

@@ -10,11 +10,14 @@ namespace MunicipalServicesApp
        
         public static SinglyLinkedList<Issue> Issues = new SinglyLinkedList<Issue>(); // Custom linked list to store issues
 
+        public static EventManager EventsManager = new EventManager();
+
         [STAThread]
         static void Main()
         {
            
             ApplicationConfiguration.Initialize();
+            Data.SampleEventSeeder.Seed(EventsManager); // Seed sample events
             Application.Run(new MainMenuForm()); // Start with MainMenuForm
         }
     }

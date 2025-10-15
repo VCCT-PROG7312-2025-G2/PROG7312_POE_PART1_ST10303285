@@ -53,23 +53,27 @@ namespace MunicipalServicesApp
             this.cardsPanel.AutoScroll = true;
             this.cardsPanel.FlowDirection = FlowDirection.TopDown;
             this.cardsPanel.WrapContents = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
 
             // Add cards
             this.cardsPanel.Controls.Add(CreateCard("Report Issues", "Report potholes, broken lights, sanitation problems and more.", true, BtnReport_Click, Properties.Resources.reportIcon));
-            this.cardsPanel.Controls.Add(CreateCard("Local Events & Announcements", "View upcoming local events and official announcements.", false, BtnEvents_Click, Properties.Resources.eventsIcon));
+            this.cardsPanel.Controls.Add(CreateCard("Local Events & Announcements", "View upcoming local events and official announcements.", true, BtnEvents_Click, Properties.Resources.eventsIcon));
             this.cardsPanel.Controls.Add(CreateCard("Service Request Status", "Check the status of previously submitted requests/issues.", false, BtnStatus_Click, Properties.Resources.statusIcon));
 
             this.Controls.Add(this.cardsPanel);
             this.Controls.Add(this.headerPanel);
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private Panel CreateCard(string title, string desc, bool enabled, EventHandler onClick, Image icon) // Method to create a card
         {
             var panel = new Panel()
             {
-                Size = new Size(780, 120),
+                Size = new Size(1800, 200),
                 BackColor = Color.White,
                 Margin = new Padding(8),
+               
+
             };
 
             // Rounded corners for panel
@@ -114,7 +118,7 @@ namespace MunicipalServicesApp
             var btn = new Button()
             {
                 Text = enabled ? "Open" : "Coming Soon",
-                Location = new Point(600, 35),
+                Location = new Point(1600, 35),
                 Size = new Size(150, 45),
                 Enabled = enabled,
                 BackColor = enabled ? ColorTranslator.FromHtml("#A8D8EA") : ColorTranslator.FromHtml("#D6D6D6"),
