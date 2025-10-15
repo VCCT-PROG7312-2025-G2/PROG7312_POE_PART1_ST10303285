@@ -1,5 +1,8 @@
 # Community Issue Reporting System
 
+<img width="512" height="512" alt="CPT" src="https://github.com/user-attachments/assets/e4a32517-5180-428e-bf2b-45d5d46296be" />
+
+
 ## Overview
 This application is a **Windows Forms C# project** that allows users to report issues within their local community as well as stay updated on local events.  
 It forms Part 2 of the POE and implements the **Report Issues** feature as well as **Local Events and Announcements** feature.
@@ -57,5 +60,4 @@ https://learn.microsoft.com/en-us/visualstudio/designers/walkthrough-windows-for
 https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.dictionary-2?view=net-9.0
 https://learn.microsoft.com/en-us/dotnet/api/system.collections.generic.priorityqueue-2?view=net-9.0
 https://medium.com/mesciusinc/the-definitive-guide-to-winforms-controls-f7f12196563a 
-<img width="512" height="512" alt="CPT" src="https://github.com/user-attachments/assets/19f78303-8af1-4352-b959-ae7c6fced58e" />
 
