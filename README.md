@@ -75,6 +75,8 @@ This helps the municipality see which areas clusters of similar problems, how th
 2. Set the startup project to MunicipalServicesApp.
 3. Run the application (F5 or Ctrl+F5).
 4. The **Main Menu** will appear, access all the features from here.
+5. Refer to the video above if confused on how to use the app.
+
 
 ## Changelog from Part 1 & 2 to Past 3
 | Area               | Old version                                  | What changed for Part 3 
