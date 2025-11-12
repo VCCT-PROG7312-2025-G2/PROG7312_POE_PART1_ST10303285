@@ -86,6 +86,9 @@ This helps the municipality see which areas clusters of similar problems, how th
 |Error Handling      |  Very little                                 | Added try-catch blocks.                                               |
 |-------------------------------------------------------------------------------------------------------------------------------------------|
 
+## KEY LEARNING:
+Other than the complex data structures such as AVL Trees, Heaps and Graphs, something else I learnt was to approach problems by breaking them down and trying to understand it in different contexts maybe.I first focused on only getting the features ready but then as i worked, i started thinking about the different structures and how it could be used to ease use of the application as well as how i could make it easier to undersatdn for the users with little to no knowledge of technology. When a function didn’t work, I tracked back to the beginning to see where I could have missed something rather than using github copilot. I tried to understand why it didnt work for example when i implemented the priority heap, i ran into small logical errors, like not linking the the edges properly in the graph so i checked where data was being passed and how the weights were being calculated and whether my methods were returning what i expected.
+Overall i started to understand how each part works with each other before moving on which improved my confidence in tackling errors.
 
 
 ## References:
