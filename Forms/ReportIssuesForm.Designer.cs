@@ -34,7 +34,7 @@ namespace MunicipalServicesApp
             base.Dispose(disposing);
         }
 
-        private void InitializeComponent()
+        private void InitialiseComponent()
         {
             components = new Container();
 
@@ -118,7 +118,7 @@ namespace MunicipalServicesApp
                 DropDownStyle = ComboBoxStyle.DropDownList,
                 Font = new Font("Segoe UI", 10F)
             };
-            cmbCategory.Items.AddRange(new object[] { "Sanitation", "Roads", "Utilities", "Street Lighting", "Public Safety", "Other" });
+            cmbCategory.Items.AddRange(new object[] { "Sanitation", "Roads", "Utilities", "StreetLight", "Public Safety", "Other" });
             cmbCategory.SelectedIndexChanged += AnyInputChanged;
             this.Controls.Add(cmbCategory);
 

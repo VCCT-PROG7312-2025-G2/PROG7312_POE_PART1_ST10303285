@@ -15,7 +15,7 @@ namespace MunicipalServicesApp.Forms
 
             // Save event or throw error if null
             this.ev = ev ?? throw new ArgumentNullException(nameof(ev));
-            InitializeComponent();
+            InitialiseComponent();
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.WindowState = FormWindowState.Maximized;

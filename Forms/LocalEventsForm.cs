@@ -20,7 +20,7 @@ namespace MunicipalServicesApp.Forms
         {
             // Save the event manager or throw error if null
             eventManager = manager ?? throw new ArgumentNullException(nameof(manager));
-            InitializeComponent();
+            InitialiseComponent();
             //form setup
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.StartPosition = FormStartPosition.CenterScreen;

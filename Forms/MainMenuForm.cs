@@ -19,7 +19,7 @@ namespace MunicipalServicesApp
 
         public MainMenuForm() // Constructor
         {
-            InitializeComponent();
+            InitialiseComponent();
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.AutoSize = false;
@@ -46,8 +46,10 @@ namespace MunicipalServicesApp
         //--------------------------------------------------------------------------------------------------------------------------//
         private void BtnStatus_Click(object sender, EventArgs e) // Event handler for status button
         {
-            MessageBox.Show("This feature is coming in a later release.", "Info",
-                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            var f = new ServiceRequestStatusForm(); // Create new ServiceRequestStatusForm
+            f.FormClosed += (s, args) => Show();
+            f.Show();
+            Hide();
         }
     }
 }

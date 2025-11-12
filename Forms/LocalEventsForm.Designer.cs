@@ -31,7 +31,7 @@ namespace MunicipalServicesApp.Forms
             base.Dispose(disposing);
         }
 
-        private void InitializeComponent()
+        private void InitialiseComponent()
         {
             this.Text = "Local Events & Announcements";
             this.WindowState = FormWindowState.Maximized;

@@ -17,7 +17,7 @@ namespace MunicipalServicesApp
 
         public ReportIssuesForm() // Constructor
         {
-            InitializeComponent();
+            InitialiseComponent();
             this.FormBorderStyle = FormBorderStyle.Sizable;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.WindowState = FormWindowState.Maximized;
@@ -91,7 +91,31 @@ namespace MunicipalServicesApp
             // Add to custom linked list
             Program.Issues.AddLast(issue);
 
-            MessageBox.Show("Issue submitted. Reference ID: " + issue.Id,
+            try
+            {
+                var request = new Model.ServiceRequest
+                {
+                    Location = issue.Location,
+                    Category = issue.Category,
+                    Description = issue.Description,
+                    AttachmentPath = issue.AttachmentPath,
+                    EngagementLevel = issue.EngagementLevel,
+                    DateReported = DateTime.Now,
+                    Priority = 3,
+                    Status = "Submitted"
+                };
+
+                var repo = new Data.ServiceRequestRepo();
+                repo.Add(request);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Warning: request saved locally but failed to persist to file: " + ex.Message,
+                "Persistence Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+                MessageBox.Show("Issue submitted. Reference ID: " + issue.Id,
                 "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             // Reset form

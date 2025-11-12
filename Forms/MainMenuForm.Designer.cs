@@ -12,7 +12,7 @@ namespace MunicipalServicesApp
         private Label lblSubtitle; // Subtitle label
         private FlowLayoutPanel cardsPanel; // Panel to hold cards
 
-        private void InitializeComponent() // Method to initialize components
+        private void InitialiseComponent() // Method to initialise components
         {
             this.headerPanel = new Panel();
             this.lblTitle = new Label();
@@ -58,7 +58,7 @@ namespace MunicipalServicesApp
             // Add cards
             this.cardsPanel.Controls.Add(CreateCard("Report Issues", "Report potholes, broken lights, sanitation problems and more.", true, BtnReport_Click, Properties.Resources.reportIcon));
             this.cardsPanel.Controls.Add(CreateCard("Local Events & Announcements", "View upcoming local events and official announcements.", true, BtnEvents_Click, Properties.Resources.eventsIcon));
-            this.cardsPanel.Controls.Add(CreateCard("Service Request Status", "Check the status of previously submitted requests/issues.", false, BtnStatus_Click, Properties.Resources.statusIcon));
+            this.cardsPanel.Controls.Add(CreateCard("Service Request Status", "Check the status of previously submitted requests/issues.", true, BtnStatus_Click, Properties.Resources.statusIcon));
 
             this.Controls.Add(this.cardsPanel);
             this.Controls.Add(this.headerPanel);
@@ -127,7 +127,7 @@ namespace MunicipalServicesApp
                 Font = new Font("Segoe UI", 10F, FontStyle.Regular),
             };
 
-            btn.FlatAppearance.BorderSize = 0; //
+            btn.FlatAppearance.BorderSize = 0; 
             btn.Region = new Region(RoundedRect(new Rectangle(0, 0, btn.Width, btn.Height), 8));
 
             if (enabled) btn.Click += onClick;// attach event

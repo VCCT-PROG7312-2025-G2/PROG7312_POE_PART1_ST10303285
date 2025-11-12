@@ -27,7 +27,7 @@ namespace MunicipalServicesApp.Forms
             base.Dispose(disposing);
         }
 
-        private void InitializeComponent()
+        private void InitialiseComponent()
         {
             this.Text = "Event Details";
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -93,7 +93,7 @@ namespace MunicipalServicesApp.Forms
             // ------------------------------------------------------------------------------------------------- Contact Buttons ------------------------------------------------------------
             btnEmail = new Button
             {
-                Text = "Email Organizer",
+                Text = "Email Organiser",
                 Size = new Size(160, 40),
                 Location = new Point(600, 520),
                 BackColor = ColorTranslator.FromHtml("#A8D8EA"),
